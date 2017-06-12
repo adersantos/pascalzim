@@ -3,7 +3,7 @@ Program NumerosPerfeitos;
 //Escreva um programa para informar todos os números perfeitos entre 1 e 10(4)
 
 // INICIO - declaração de variáveis
-var numPerfeito, DezAQuarta, resultado, i, j: integer;
+var numPerfeito, DezAQuarta, resultado, soma, i, j: integer;
 
 // FIM - declaração de variáveis
 
@@ -13,13 +13,18 @@ Begin
 	begin		
 		numPerfeito := (i + 1);
 		
-		for j := 0 to numPerfeito do
+		for j := 1 to numPerfeito do
 		begin
-			resultado := numPerfeito mod (j + 1);
+			resultado := numPerfeito mod j;
 			if resultado = 0 then
 			begin
-				writeln(numPerfeito);
+				soma := soma + j;
 			end;
+		end;
+		
+		if (soma div 2 = DezAQuarta) then
+		begin
+ 				writeln(DezAQuarta);
 		end;
 		
 	end;
